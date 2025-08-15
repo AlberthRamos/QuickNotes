@@ -315,22 +315,5 @@ node test-rabbitmq.js
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 👥 Suporte
-
-- **Documentação**: [docs/](docs/)
-- **Issues**: [GitHub Issues](https://github.com/seu-usuario/quicknotes-crm/issues)
-- **Email**: suporte@quicknotes.com
-
-## 📱 Links úteis
-
-- **Repositório**: https://github.com/seu-usuario/quicknotes-crm
-- **Documentação API**: http://localhost:3000/api-docs (após iniciar o backend)
-- **Demo**: Em breve...
-
----
 
 **Desenvolvido com ❤️ pela equipe QuickNotes CRM**
