@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Histórico de Notas</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Filtrar por Cliente</mat-label>
+      <mat-select [(ngModel)]="selectedCliente" (selectionChange)="loadNotes()">
+        <mat-option [value]="null">Todos os Clientes</mat-option>
+        <mat-option *ngFor="let cliente of clientes" [value]="cliente.id">
+          {{ cliente.nome }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="loading" class="loading-container">
+      <mat-spinner diameter="50"></mat-spinner>
+      <p>Carregando notas...</p>
+    </div>
+
+    <div *ngIf="!loading && notas.length === 0" class="empty-state">
+      <mat-icon>note_add</mat-icon>
+      <p>Nenhuma nota encontrada</p>
+      <small *ngIf="selectedCliente">Tente selecionar outro cliente</small>
+    </div>
+
+    <mat-list *ngIf="!loading && notas.length > 0">
+      <mat-list-item *ngFor="let nota of notas" class="note-item">
+        <div class="note-content">
+          <div class="note-header">
+            <span class="cliente-name">{{ getClienteName(nota.cliente_id) }}</span>
+            <span class="user-name">{{ nota.usuario_nome }}</span>
+          </div>
+          <p class="note-text">{{ nota.texto }}</p>
+          <div class="note-footer">
+            <span class="date">{{ formatDate(nota.data_criacao) }}</span>
+          </div>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
