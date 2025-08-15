@@ -80,8 +80,8 @@ CREATE TABLE notas (
 
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/seu-usuario/quicknotes-crm.git
-cd quicknotes-crm
+git clone https://github.com/AlberthRamos/QuickNotes.git
+cd Quicknotes
 ```
 
 2. **Configure as variáveis de ambiente**
