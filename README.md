@@ -316,4 +316,5 @@ node test-rabbitmq.js
 5. Abra um Pull Request
 
 
-**Desenvolvido com ❤️ pela equipe QuickNotes CRM**
+**Desenvolvido por Alberth Ramos da Silva - Engenheiro de Software**
+https://www.linkedin.com/in/alberthdev/
